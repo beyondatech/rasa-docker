@@ -11,9 +11,6 @@ RUN python -m spacy download $MODEL
 WORKDIR /app
 ENV HOME=/app
 
-# set the user to run, don't run as root
-USER 1001
-
 # set entrypoint for interactive shells
 ENTRYPOINT ["rasa"]
 
