@@ -1,7 +1,7 @@
 FROM qts8n/cuda-python:runtime
 
 ARG MODEL
-RUN pip3 install -U pip setuptools wheel spacy[cuda102] \
+RUN pip3 install -U pip setuptools wheel rasa spacy[cuda102] \
     && python -m spacy download $MODEL
 
 WORKDIR /app
